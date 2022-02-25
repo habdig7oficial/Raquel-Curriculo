@@ -1,0 +1,294 @@
+/*Copyright © 2021 Mateus Felipe da Silveira Vieira, Raquel Orestes da Silveira*/
+
+/*Este arquivo é parte do programa Perfectum Curriculum Vitae
+
+Perfectum Curriculum Vitae é um software livre; você pode redistribuí-lo e/ou
+modificá-lo dentro dos termos da Licença Pública Geral GNU como
+publicada pela Free Software Foundation (FSF); na versão 3 da
+Licença, ou (a seu critério) qualquer versão posterior.
+
+Este programa é distribuído na esperança de que possa ser útil,
+mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÃO
+a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a
+Licença Pública Geral GNU para maiores detalhes.
+
+Você deve ter recebido uma cópia da Licença Pública Geral GNU junto
+com este programa, Se não, veja <http://www.gnu.org/licenses/>.*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;600&display=swap');
+
+:root{
+
+    --roxo:rgb(69, 41, 97);
+    --verde:rgb(61, 118, 5);
+    --verde_claro:rgb(183, 240, 29);
+    --verde_escuro:rgb(87, 110, 23);
+    --verde_medium:rgb(193, 230, 94);
+    --verde_diferent:rgb(82, 182, 154);
+    --branco:rgb(255,255,255);
+    --preto:rgb(0,0,0);
+    --transparente:transparent;
+
+    --ftp:5rem;
+    --ftpc: 0.2rem ; 
+
+    --mp:0.3rem;
+    --pp:0.6rem;
+}
+body{
+    background-image: url(./assets/Gnome\ X00F2.0\ 1080p-modify.jpeg);
+
+    overflow-x: hidden;
+
+}
+
+::selection{
+    background-color: var(--roxo);
+}
+
+
+h1,h2,h3,h4{
+    font-family: 'Roboto', sans-serif;
+    color: var(--branco);
+    text-align: center;
+}
+p,a{
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 2rem;
+
+
+
+    margin-left: 0.5rem;
+}
+p{
+    color: var(--branco);
+}
+a{
+    color: var(--verde_claro);
+}
+
+a:visited{
+    color: var(--verde_escuro);
+}
+
+a:hover{
+    color: var(--verde_medium);
+    position: relative;
+    animation: cfall ease-in 950ms;
+}
+
+h1{
+    font-size: var(--ftp);
+    animation: gtitle 1s infinite;
+    
+
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3rem;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    padding: calc(var(--pp) + var(--ftp));
+
+    position: static;
+
+
+}
+
+ul,ol{
+    margin: var(--mp);
+    padding: var(--pp);
+
+    list-style: square inside;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+
+    padding-top: var(--pp);
+    padding-bottom: var(--pp);
+    list-style: square inside;
+
+}
+
+footer{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    text-align: center;
+}
+
+.destaque{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+}
+
+.linha{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.centro{
+    display: flex;
+    justify-content: center;
+}
+.empty{
+    margin: 5rem;
+}
+
+.over{
+    border-top:0.8rem double var(--verde);
+    margin-left: var(--pp);
+    margin-right: var(--pp);
+}
+
+.stable{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.bolderfont{
+    animation: bolderfont 3s infinite;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bumble{
+    animation: bumble 4s infinite;
+}
+
+.num{
+    animation: num 3s infinite ;
+}
+
+@media (max-width: 531px)
+{
+    h1{
+
+        --ftp:10vw;
+    }
+
+    h2{
+        font-size: 6vw;
+    }
+
+    h3{
+        font-size: 5vw;
+    }
+
+    p,a{
+        font-size: 5vw;
+    }
+
+}
+
+@media (max-width: 685px) {
+
+    footer{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    
+}
+
+@media (max-width:645px) {
+    h1{
+
+        --ftp:10vw;
+    }
+
+}
+
+
+@keyframes bumble {
+    0%,50%{
+        transform: rotate3d(0, 0, 1, 0deg);
+        text-shadow: none;
+       
+    }
+
+    25%{
+        transform: rotate3d(0, 0, 1, 4deg);
+        text-shadow: 1px 1px 2px var(--preto), 0 0 1em var(--branco), 0 0 0.2em var(--branco);
+        
+    }
+    
+
+    75%{
+        transform: rotate3d(0, 0, 1, -4deg);
+        text-shadow: 1px 1px 2px var(--preto), 0 0 1em var(--branco), 0 0 0.2em var(--branco);
+    }
+
+}
+
+@keyframes cfall {
+    0%,50%,100%{
+        bottom: 0rem;
+    }
+
+    25%{
+        bottom: 0.2rem;
+    }
+
+    75%{
+        bottom: -0.2rem;
+    }
+
+}
+
+@keyframes gtitle {
+    0%,100%{
+        font-size: var(--ftp);  
+    }
+
+    50%{
+        font-size: calc(var(--ftp) + var(--ftpc));
+
+    }
+
+}
+
+
+@keyframes bolderfont {
+
+    0%,100%{
+        color: var(--branco);
+    }
+
+    50%{
+        color: var(--verde_diferent);
+    }
+    
+}
+
+@keyframes num {
+    0%,100%{
+        color: var(--branco);
+        transform: rotate3d(0,0,0,0deg);
+    }
+
+    50%{
+    color: var(--verde_diferent);
+    transform: rotate3d(5,-4,3,17deg);
+    }
+}
+
