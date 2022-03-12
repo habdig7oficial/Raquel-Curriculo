@@ -1,0 +1,25 @@
+{
+  "name": "raquel-curriculo",
+  "version": "1.0.0",
+  "description": "Currículo de auxiliar de veterinário da minha mãe",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/habdig7oficial/Raquel-Curriculo.git"
+  },
+  "author": "Mateus Felipe da Silveira Vieira",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/habdig7oficial/Raquel-Curriculo/issues"
+  },
+  "homepage": "https://github.com/habdig7oficial/Raquel-Curriculo#readme",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}
